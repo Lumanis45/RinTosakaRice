@@ -1,0 +1,27 @@
+(defpoll nowplaying :interval "2s"
+  `~/.config/eww/scripts/nowplaying.sh`)
+(defpoll cover :interval "2s"
+  `~/.config/eww/scripts/cover.sh`)
+
+(defwindow music_player
+  :geometry (geometry :x "0%" :y "0%" :width "200" :height "200px" :anchor "center")
+  :stacking "fg"
+  :visible true
+  (box
+    :class "music-box"
+    :orientation "h"
+    :spacing 1
+    :halign "center"
+    (label :text nowplaying :class "now")
+    (image :path cover :image-width 480 :image-height 480)
+    (box :name "butt"
+      :orientation "h"
+      :spacing 10
+      (button :onclick "playerctl previous | eww close music_player" "Previous")
+      (button :onclick "playerctl play-pause | eww close music_player" "Play/Pause")
+      (button :onclick "playerctl next | eww close music_player" "Next")
+      (button :onclick "eww close music_player" "Esc")
+    )
+  )
+)
+

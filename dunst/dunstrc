@@ -1,0 +1,15 @@
+[global]
+	font = JetBrains Mono 10
+	frame_color = "#5e0305"
+	separator_color = frame
+	corner_radius = 6
+	padding = 10
+	horizontal_padding = 20
+	transparency = 10
+
+[urgency_normal]
+	background = "#0A141E"
+	foreground = "#D7E7F2"
+	timeout = 10
+
+

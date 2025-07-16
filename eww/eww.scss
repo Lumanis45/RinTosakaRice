@@ -1,0 +1,44 @@
+* {
+  font-family: "Sans", "DejaVu Sans", "Noto Sans", sans-serif;
+  color: white;
+}
+
+// Это определение будет переопределено следующим
+button {
+  background-color: black;
+  border: none;
+  font-size: 18px;
+  padding: 5px 10px;
+}
+
+.music-box {
+  background-color: #530202;
+  padding: 1em;
+  border-radius: 12px;
+  color: white;
+  font-family: monospace;
+}
+
+.title {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.track-info {
+  font-size: 1em;
+  margin-bottom: 0.5em;
+}
+
+// Это определение будет использоваться
+button {
+  background-color: #530202;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4em 0.8em;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #aa0000;
+}
